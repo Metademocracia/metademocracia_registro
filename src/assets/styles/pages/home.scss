@@ -1,0 +1,127 @@
+@use "@/assets/styles/main.scss" as *;
+//---------------------------------------------------------------------------------------------//
+//========================================= home ==============================================//
+//---------------------------------------------------------------------------------------------//
+
+#home {
+  @extend .parent;
+  @extend .margin-global;
+  gap: 64px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative; 
+
+  @include media(max, 960px){
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .section-form{
+    max-width: 50%;
+    padding-inline: 30px;
+    position: relative;
+    z-index: 99;
+
+    @include media(max, 960px){
+      max-width: 100%;
+      padding-top: 30px;
+      padding-inline: 0px;
+    }
+
+    .tcenter-mobile{
+      @include media(max, 960px){
+        text-align: center;
+      }
+    }
+
+    h4{
+      @include media(max, 960px){
+        font-size: 18px;
+      }
+    }
+
+    p{
+      @include media(max, 960px){
+        font-size: 14px;
+      }
+    }
+
+    .primary-span{
+      color: $primary;
+      font-weight: 700;
+    }
+
+    .italic{
+      font-style: italic;
+    }
+
+    .btn{
+      background-color: $primary!important;
+      border-radius: 5px!important;
+    }
+
+    ::placeholder{
+      color: #000;
+      opacity: 1;
+    }
+
+    .v-form{
+      @include media(max, 960px){
+        display: flex;
+        flex-direction: column;
+
+        .v-btn{
+          width: 200px!important;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+    }
+  }
+
+  .img-bg{
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+
+    @include media(max, 960px){
+      bottom: 0;
+      height: 40vh;
+      width: 100vw;
+    }
+
+    @include media(max, 660px){
+      height: 40vh;
+    }
+
+    @include media(max, 380px){
+      height: 30vh;
+    }
+  }
+}
+
+
+.snack-green{
+  background-color: #FFF!important;
+  border: 3px solid $primary!important;
+  color: #000!important;
+
+  .v-overlay__content{
+    .v-snackbar__content{
+      color: #000!important;
+    }
+  }
+}
+
+.snack-error{
+  background-color: #FFF!important;
+  border: 2px solid $error!important;
+  color: #000!important;
+
+  .v-overlay__content{
+    .v-snackbar__content{
+      color: #000!important;
+    }
+  }
+}
