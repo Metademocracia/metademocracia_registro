@@ -140,7 +140,7 @@ export default{
         .then((response) => {
           console.log(response.data)
           this.loadingForm = false;
-          this.text = 'Registro creado exitosamente';
+          this.text = 'Registro creado exitósamente';
           this.snackbar = true;
         })
         .catch((error) => {
