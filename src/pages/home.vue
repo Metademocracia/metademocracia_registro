@@ -49,6 +49,10 @@
       </v-form>
     </section>
 
+    <section class="section-prueba">
+      <img src="@/assets/sources/images/meta-registro.png" alt="Meta Background">
+    </section>
+
     <img src="@/assets/sources/images/meta-registro.png" alt="Meta Background" class="img-bg">
 
     <!-- Snack -->

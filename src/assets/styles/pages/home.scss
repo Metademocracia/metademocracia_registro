@@ -6,14 +6,16 @@
 #home {
   @extend .parent;
   @extend .margin-global;
-  gap: 64px;
   display: flex;
   justify-content: flex-start;
   position: relative; 
+  padding-bottom: 0px!important;
 
   @include media(max, 960px){
     justify-content: center;
     align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 0px!important;
   }
 
   .section-form{
@@ -26,8 +28,7 @@
       max-width: 100%;
       padding-top: 30px;
       padding-inline: 30px;
-      height: 1070px;
-      // background-color: red;
+      // height: 1070px;
     }
 
     .delete-mobile{
@@ -93,6 +94,21 @@
     }
   }
 
+  .section-prueba{
+    display: none;
+
+    @include media(max, 960px){
+      display: block;
+      margin-inline: calc(50% - 50vw);
+      margin-top: -15px;
+  
+      img{
+        width: 100vw;
+        height: 60vh;
+      }
+    }
+  }
+
   .img-bg{
     width: 40vw;
     height: 100vh;
@@ -102,7 +118,8 @@
     @include media(max, 960px){
       bottom: 0;
       height: 720px;
-      width: 100vw;      
+      width: 100vw;     
+      display: none; 
     }
 
     // @include media(max, 660px){
