@@ -25,7 +25,15 @@
     @include media(max, 960px){
       max-width: 100%;
       padding-top: 30px;
-      padding-inline: 0px;
+      padding-inline: 30px;
+      height: 1070px;
+      // background-color: red;
+    }
+
+    .delete-mobile{
+      @include media(max, 960px){
+        display: none;
+      }
     }
 
     .tcenter-mobile{
@@ -37,18 +45,23 @@
     h4{
       @include media(max, 960px){
         font-size: 18px;
+        margin-bottom: 0px;
       }
     }
 
     p{
       @include media(max, 960px){
-        font-size: 14px;
+        font-size: 13px;
       }
     }
 
     .primary-span{
       color: $primary;
       font-weight: 700;
+
+      @include media(max, 960px){
+        font-size: 24px;
+      }
     }
 
     .italic{
@@ -69,6 +82,7 @@
       @include media(max, 960px){
         display: flex;
         flex-direction: column;
+        padding-inline: 30px;
 
         .v-btn{
           width: 200px!important;
@@ -87,16 +101,51 @@
 
     @include media(max, 960px){
       bottom: 0;
-      height: 40vh;
-      width: 100vw;
+      height: 720px;
+      width: 100vw;      
     }
 
-    @include media(max, 660px){
-      height: 40vh;
-    }
+    // @include media(max, 660px){
+    //   height: 40vh;
+    // }
 
-    @include media(max, 380px){
-      height: 30vh;
+    // @include media(max, 380px){
+    //   height: 30vh;
+    // }
+  }
+
+  @include media(max, 960px){
+    .input{
+      max-height: 30px!important;
+      height: 30px;
+      margin-bottom: 5px;
+  
+      .v-field{
+        height: 30px!important;
+        max-height: 30px!important;
+        min-height: 1px!important;
+      }
+  
+      input{
+        height: 30px!important;
+        max-height: 30px!important;
+        min-height: 1px!important;
+        margin-top: 0px;
+      }
+  
+      .v-field__input{
+        padding-left: 15px;
+        padding-block: 5px;
+        height: 30px!important;
+        max-height: 30px!important;
+        min-height: 1px!important;
+      }
+    }
+  }
+
+  .btn-mobile{
+    @include media(max, 960px){
+      margin-top: 15px;
     }
   }
 }
@@ -123,5 +172,11 @@
     .v-snackbar__content{
       color: #000!important;
     }
+  }
+}
+
+.v-messages__message{
+  @include media(max, 960px){
+    display: none;
   }
 }

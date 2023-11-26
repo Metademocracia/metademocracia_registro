@@ -1,8 +1,8 @@
 // styles
-import '@/assets/styles/Main.scss'
+import '@/assets/styles/main.scss'
 
 // Components
-import App from './app.vue'
+import App from './App.vue'
 
 // Composables
 import { createApp } from 'vue'

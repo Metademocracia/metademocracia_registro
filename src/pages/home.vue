@@ -1,13 +1,13 @@
 <template>
   <div id="home" class="fill-height flex-center">
     <section class="section-form">
-      <h4 class="tcenter-mobile">
+      <h4 class="tcenter-mobile no-margin-mobile">
         ¡Bienvenido a <br> <span class="primary-span">METADEMOCRACIA!</span>
       </h4>
 
       <h4 class="mb-1 italic tcenter-mobile">Unete a la Venezuela digital</h4>
       <p class="tcenter-mobile">registrando tu correo con el cual generas tu billetera que funciona como tu
-        identidad digital (NFT).<br>
+        identidad digital (NFT).<br class="delete-mobile">
         <br>Desde ya puedes proponer ideas y participar en procesos autónomos donde manifestarás tu voluntad comenzando con la consulta del 3 de diciembre.
       </p>
 
@@ -45,7 +45,7 @@
         rounded="0"
         ></v-text-field>
 
-        <v-btn class="btn" type="submit" :loading="loadingForm" @click="createRegister()">Registrarse</v-btn>
+        <v-btn class="btn btn-mobile" type="submit" :loading="loadingForm" @click="createRegister()">Registrarse</v-btn>
       </v-form>
     </section>
 
@@ -82,7 +82,7 @@
         <v-btn
           color="#B00020"
           variant="text"
-          @click="snackbar = false"
+          @click="snackbarError = false"
           style="font-weight: 700!important;"
         >
           Cerrar
