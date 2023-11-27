@@ -113,7 +113,7 @@ export default{
     const snackbar = ref(false);
     const text = ref('');
     const snackbarError = ref(false);
-
+    const clientIp = ref(null); 
     
     return{
       loadingForm,
@@ -124,8 +124,13 @@ export default{
       snackbar,
       text,
       snackbarError,
+      clientIp,
     }
   },
+
+  mounted(){
+    this.getIp()
+  },  
 
   methods:{
     async createRegister() {
@@ -138,6 +143,7 @@ export default{
         email: this.email,
         cedula: this.cedula,
         phone: this.phone,
+        ip: this.clientIp,
       }
       
       axios.post( `${process.env.API_URL}/subscription/`, postDataRegister)
@@ -154,6 +160,16 @@ export default{
           this.loadingForm = false;
         });
       }
+    },
+
+    getIp(){
+      axios.get('https://api64.ipify.org?format=json')
+      .then(response => {
+        this.clientIp = response.data.ip;
+        // console.log(this.clientIp, 'holaaaa soy IP')
+      }).catch(error => {
+        console.error('Error al obtener la dirección IP:', error);
+      });
     },
   },
 }
