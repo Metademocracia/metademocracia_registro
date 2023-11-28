@@ -6,9 +6,9 @@ import VImgInput from '@/components/helpers/v-img-input.vue'
 import VAvatarUpload from '@/components/helpers/v-avatar-upload.vue'
 
 // ? imported from external
-import { VSkeletonLoader } from 'vuetify/labs/VSkeletonLoader'
-import { VOtpInput } from 'vuetify/labs/VOtpInput'
-import { VDataTable, VDataTableServer } from 'vuetify/labs/VDataTable'
+import { VSkeletonLoader } from 'vuetify/lib/components/VSkeletonLoader/index.mjs'
+import { VOtpInput } from 'vuetify/lib/components/VOtpInput/index.mjs'
+import { VDataTable, VDataTableServer } from 'vuetify/lib/components/VDataTable/index.mjs'
 import VueApexCharts from "vue3-apexcharts"
 import VueRecaptcha from 'vue3-recaptcha2'
 
